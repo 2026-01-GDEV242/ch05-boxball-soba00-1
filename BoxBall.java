@@ -21,7 +21,6 @@ import java.awt.geom.*;
  *
  * @version 2025.10.06
  */
-
 public class BoxBall
 {
     private Box myBox;
