@@ -51,7 +51,16 @@ public class BoxBall
         yPosition = yPos;
         color = ballColor;
         diameter = ballDiameter;
-
+        //added myMbox to the constructor and set initial speeds to random +-7
+        myBox = box;
+        ySpeed = (int)(Math.random()*(15))-7;         // vertical speed
+        xSpeed = (int)(Math.random()*(15))-7;;        // horizontal speed
+        
+        //makes sure x or y speed is never 0, ensuring diagonal movement
+        if(xSpeed == 0) xSpeed = 1;
+        if(ySpeed == 0) ySpeed = 1;
+        
+        
         canvas = drawingCanvas;
     }
 
