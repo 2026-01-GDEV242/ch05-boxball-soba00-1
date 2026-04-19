@@ -94,8 +94,19 @@ public class BoxBall
         yPosition += ySpeed;
   
         // figure out if it has hit the left or right wall
-        
+        if (xPosition <= myBox.getLeftWall())
+            {
+                xSpeed = -xSpeed;
+            }
+        if (xPosition <= myBox.getRightWall())
+            {
+                xSpeed = -xSpeed;
+            }
+            
         // figure out if it has hit the top or bottom wall
+        
+        if (yPosition <= myBox.getRightWall())
+            {
         
         draw();
     }    
