@@ -98,10 +98,12 @@ public class BoxBall
         if (xPosition <= myBox.getLeftWall())
             {
                 xSpeed = -xSpeed;
+                xPosition = myBox.getLeftWall();
             }
-        if (xPosition >= myBox.getRightWall())
+        if (xPosition + diameter >= myBox.getRightWall())
             {
                 xSpeed = -xSpeed;
+                xPosition = myBox.getRightWall() - diameter;
             }
             
         // figure out if it has hit the top or bottom wall and bounces
@@ -109,10 +111,12 @@ public class BoxBall
         if (yPosition <= myBox.getTopWall())
             {
                 ySpeed = -ySpeed;
+                yPosition = myBox.getTopWall();
             }
-        if (yPosition >= myBox.getTopWall())
+        if (yPosition + diameter >= myBox.getBottomWall())
             {
                 ySpeed = -ySpeed;
+                yPosition = myBox.getBottomWall() - diameter;
             }
             
         //draw current frame
