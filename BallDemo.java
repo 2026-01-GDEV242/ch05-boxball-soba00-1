@@ -40,6 +40,7 @@ public class BallDemo
         if(numBalls < 5) numBalls = 5;
         if(numBalls > 30) numBalls = 30;
         
+        ArrayList<BoxBall> balls = new ArrayList<>();
         
         
         
