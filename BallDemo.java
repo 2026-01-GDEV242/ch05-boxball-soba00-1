@@ -1,5 +1,5 @@
 import java.awt.Color;
-
+import java.util.ArrayList;
 /**
  * Class BallDemo - a short demonstration showing animation with the 
  * Canvas class. 
@@ -33,9 +33,16 @@ public class BallDemo
      * 
      * @param numOfBalls number of balls to simulate bouncing, clamped between 5-50. 
      */
-    public void boxBounce()
+    public void boxBounce(int numBalls)
     {
         // you must implement this
+        //random number of balls
+        if(numBalls < 5) numBalls = 5;
+        if(numBalls > 30) numBalls = 30;
+        
+        
+        
+        
     }
     
     /**

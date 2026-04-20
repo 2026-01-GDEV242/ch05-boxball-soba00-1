@@ -106,11 +106,11 @@ public class BoxBall
             
         // figure out if it has hit the top or bottom wall and bounces
         
-        if (yPosition >= myBox.getTopWall())
+        if (yPosition <= myBox.getTopWall())
             {
                 ySpeed = -ySpeed;
             }
-        if (yPosition <= myBox.getTopWall())
+        if (yPosition >= myBox.getTopWall())
             {
                 ySpeed = -ySpeed;
             }
