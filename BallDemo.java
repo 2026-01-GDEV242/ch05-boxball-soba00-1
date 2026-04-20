@@ -41,6 +41,15 @@ public class BallDemo
         if(numBalls > 30) numBalls = 30;
         
         ArrayList<BoxBall> balls = new ArrayList<>();
+        //drawin each
+        for(int i = 0; i < numBalls; i++)
+            {
+              //ensuring ball is inside box
+                int diameter = 15;
+                //basically adding the leftwall then randomizer*width of box
+                int x = (int)(Math.random()*(box.getRightWall() - box.getLeftWall()-diameter));
+                
+            }
         
         
         
