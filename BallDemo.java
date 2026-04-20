@@ -43,25 +43,34 @@ public class BallDemo
         ArrayList<BoxBall> balls = new ArrayList<>();
         //drawin each
         for(int i = 0; i < numBalls; i++)
+        {
+                
+            //ensuring ball is inside box
+            int diameter = 15;
+            //basically adding the leftwall then randomizer*width of box
+            int x = box.getLeftWall()+(int)(Math.random()*(box.getRightWall() - box.getLeftWall()-diameter));
+            int y = box.getTopWall()+(int)(Math.random()*(box.getBottomWall() - box.getTopWall()-diameter));
+            //set colors such that they are not too light and hard to see
+            Color c = new Color(50+(int)(Math.random()*180), 
+                                50+(int)(Math.random()*180), 
+                                50+(int)(Math.random()*180) );
+                
+            //put it all togetha n add to list
+            BoxBall ball = new BoxBall(x, y, diameter, c, box, myCanvas);
+            balls.add(ball);
+            ball.draw();
+             
+        }
+        
+        while(true)
+        {
+            myCanvas.wait(50);
+            
+            for(int i = 0; i < balls.size(); i++)
             {
-                
-                //ensuring ball is inside box
-                int diameter = 15;
-                    //basically adding the leftwall then randomizer*width of box
-                int x = box.getLeftWall()+(int)(Math.random()*(box.getRightWall() - box.getLeftWall()-diameter));
-                int y = box.getTopWall()+(int)(Math.random()*(box.getBottomWall() - box.getTopWall()-diameter));
-                //set colors such that they are not too light and hard to see
-                Color c = new Color(50+(int)(Math.random()*180), 
-                                    50+(int)(Math.random()*180), 
-                                    50+(int)(Math.random()*180) );
-                
-                //put it all togetha n add to list
-                BoxBall ball = new BoxBall(x, y, diameter, c, box, myCanvas);
-                balls.add(ball);
-                ball.draw();
+                balls.get(i).move();
             }
-        
-        
+        }
         
     }
     
