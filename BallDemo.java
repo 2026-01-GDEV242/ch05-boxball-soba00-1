@@ -3,9 +3,15 @@ import java.util.ArrayList;
 /**
  * Class BallDemo - a short demonstration showing animation with the 
  * Canvas class. 
- *
- * @author Michael Kölling and David J. Barnes
- * @version 2016.02.29
+ * 
+ * this program creates 5-30 boxball objects within a box then animated them
+ * each has a randome color, velocity, trajectory, and starting position
+ * 
+ * @author Michael Kölling (mik)
+ * @author David J. Barnes
+ * 
+ * @author Federico Cadavid Rojas
+ * @version 2026.04.19
  */
 
 public class BallDemo   

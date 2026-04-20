@@ -9,17 +9,15 @@ import java.awt.geom.*;
  * Due to the way computer graphics are drawn using awt, the ball moves
  * DOWN when yspeed is positive and UP when yspeed is negative.
  * 
- * It is the ball's responsibility to determine if it has hit a wall and 
- * to reverse direction
- *
- * This movement can be initiated by repeated calls to the "move" method.
+ * 
  * 
  * @author Michael Kölling (mik)
  * @author David J. Barnes
  * @author Bruce Quig
  * @author William Crosbie
  *
- * @version 2025.10.06
+ * @author Federico Cadavid Rojas
+ * @version 2026.04.19
  */
 public class BoxBall
 {
@@ -36,6 +34,7 @@ public class BoxBall
 
     /**
      * Constructor for objects of class BoxBall
+     * creates boxball with random velocity
      *
      * @param xPos  the horizontal coordinate of the ball
      * @param yPos  the vertical coordinate of the ball
@@ -82,7 +81,8 @@ public class BoxBall
     }    
 
     /**
-     * Move this ball according to its position and speed and redraw.
+     * Move this ball according to its position and speed, accounting for bounce
+     * and redraw.
      **/
     public void move()
     {
